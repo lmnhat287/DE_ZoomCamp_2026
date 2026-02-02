@@ -1,4 +1,6 @@
  *.parquet
+ *.csv
+*.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -211,6 +213,12 @@ __marimo__/
 # Ignore local project settings
 .terraformrc
 terraform.rc
-*.csv
-pipeline/*.csv
-*.json
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+terraform.tfvars
+
+# Ignore dataset for NY taxi postgres demo
+pipeline/ny_taxi_postgres_data/
+
