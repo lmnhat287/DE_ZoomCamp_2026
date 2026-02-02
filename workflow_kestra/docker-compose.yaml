@@ -16,7 +16,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ny_taxi_postgres_data:/var/lib/postgresql
+      - ./ny_taxi_postgres_data:/var/lib/postgresql
 
   pgadmin:
     image: dpage/pgadmin4
@@ -29,7 +29,7 @@ services:
   kestra_postgres:
     image: postgres:18
     volumes:
-      - kestra_postgres_data:/var/lib/postgresql
+      - ./kestra_postgres_data:/var/lib/postgresql
     environment:
       POSTGRES_DB: kestra
       POSTGRES_USER: kestra
@@ -49,7 +49,7 @@ services:
     user: "root"
     command: server standalone
     volumes:
-      - kestra_data:/app/storage
+      - ./kestra_storage:/app/storage
       - /var/run/docker.sock:/var/run/docker.sock
       - /tmp/kestra-wd:/tmp/kestra-wd
     environment:
@@ -82,4 +82,4 @@ services:
       - "8081:8081"
     depends_on:
       kestra_postgres:
-        condition: service_started
+        condition: service_healthy

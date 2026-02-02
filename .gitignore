@@ -221,4 +221,6 @@ terraform.tfvars
 
 # Ignore dataset for NY taxi postgres demo
 pipeline/ny_taxi_postgres_data/
-
+workflow_kestra/ny_taxi_postgres_data/
+workflow_kestra/kestra_postgres_data/
+workflow_kestra/kestra_storage/
