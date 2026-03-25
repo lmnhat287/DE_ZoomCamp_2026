@@ -224,3 +224,16 @@ pipeline/ny_taxi_postgres_data/
 workflow_kestra/ny_taxi_postgres_data/
 workflow_kestra/kestra_postgres_data/
 workflow_kestra/kestra_storage/
+
+# Ignore data files for DuckDB demo
+data_warehouse/data/
+data_warehouse/green_taxi
+data_warehouse/green_tripdata_partitioned
+data_warehouse/green_taxi_partitioned_clustered
+data_warehouse/yellow_tripdata_partitioned
+data_warehouse/yellow_taxi
+data_warehouse/yellow_2024_optimized
+*.exe
+*.db
+*.duckdb
+*.db.wal
